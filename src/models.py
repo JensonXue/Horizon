@@ -135,11 +135,11 @@ class SourcesConfig(BaseModel):
 
 class EmailConfig(BaseModel):
     """Email configuration for updates/subscriptions."""
-    imap_server: str
+    imap_server: str = ""
     imap_port: int = 993
-    smtp_server: str
+    smtp_server: str = ""
     smtp_port: int = 465
-    email_address: str
+    email_address: str = ""
     password_env: str = "EMAIL_PASSWORD"
     sender_name: str = "Horizon Daily"
     subscribe_keyword: str = "SUBSCRIBE"
